@@ -1,0 +1,9 @@
+git@github.com:fengjingchao/aac.git
+
+1.git add .
+2.git commit -m ""
+
+3.git remote add origin https://github.com/fengjingchao/aac.git  (git remote rm origin)
+
+4.git push -u origin master  （github为空的时候）
+git push origin master  (git pull --rebase origin master)
