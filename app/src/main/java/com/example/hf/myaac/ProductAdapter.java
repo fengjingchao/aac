@@ -3,6 +3,7 @@ package com.example.hf.myaac;
 import android.support.annotation.NonNull;
 import android.support.v7.util.DiffUtil;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -18,15 +19,17 @@ class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ProductViewHold
     @Override
     public ProductViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
         View view = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.product_item, viewGroup, false);
-
+        Log.d("AAC", "onCreateViewHolder: ");
         return new ProductViewHolder(view);
     }
 
     @Override
     public void onBindViewHolder(@NonNull ProductViewHolder viewHolder, int i) {
+        Log.d("AAC", "onBindViewHolder: mProductList+"+i+"="+mProductList.get(i));
         Product product = mProductList.get(i);
+        Log.d("AAC", "onBindViewHolder: "+product.getName());
+        Log.d("AAC", "onBindViewHolder: "+product.getDescription());
         viewHolder.name.setText(product.getName());
-        viewHolder.price.setText(product.getPrice());
         viewHolder.despression.setText(product.getDescription());
 
     }
@@ -45,14 +48,12 @@ class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ProductViewHold
         public ProductViewHolder(@NonNull View itemView) {
             super(itemView);
             name = itemView.findViewById(R.id.name);
-            price = itemView.findViewById(R.id.price);
             despression = itemView.findViewById(R.id.despression);
         }
-
-
     }
 
     public void setProductList(final List<? extends Product> productList) {
+        Log.d("AAC", "setProductList: "+productList.size());
         if (mProductList == null) {
             mProductList = productList;
             notifyItemRangeInserted(0, productList.size());

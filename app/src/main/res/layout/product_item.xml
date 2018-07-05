@@ -27,10 +27,9 @@
             android:id="@+id/price"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true"
+            android:layout_below="@id/despression"
             android:layout_marginEnd="5dp"
-            android:layout_marginRight="5dp" />
+            android:layout_marginRight="5dp"/>
 
         <TextView
             android:id="@+id/despression"

@@ -10,7 +10,10 @@
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/database" />
+            <option value="$PROJECT_DIR$/databinding" />
             <option value="$PROJECT_DIR$/livedata" />
+            <option value="$PROJECT_DIR$/recycleview" />
+            <option value="$PROJECT_DIR$/room" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />

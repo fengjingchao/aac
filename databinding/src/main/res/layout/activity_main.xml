@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <data>
+        <variable
+            name="bean"
+            type="com.example.databinding.DataBindingBean">
+        </variable>
+        <variable
+            name="callback"
+            type="com.example.databinding.TextClickCallback">
+        </variable>
+    </data>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/hello"
+            android:onClick="@{() -> callback.onClick(bean)}"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{bean.text}"/>
+
+    </LinearLayout>
+</layout>

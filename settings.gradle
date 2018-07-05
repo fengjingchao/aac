@@ -1,1 +1,1 @@
-include ':app', ':livedata', ':database'
+include ':app', ':livedata', ':database', ':room', ':recycleview', ':databinding'
